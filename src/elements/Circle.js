@@ -36,7 +36,7 @@ export default class Circle extends Shape {
 extend(Circle, { x, y, cx, cy, width, height })
 
 registerMethods({
-  Element: {
+  Container: {
     // Create circle element
     circle: wrapWithAttrCheck(function (size) {
       return this.put(new Circle())
@@ -46,4 +46,4 @@ registerMethods({
   }
 })
 
-register(Circle)
+register(Circle, 'Circle')
